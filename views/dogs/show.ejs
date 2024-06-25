@@ -1,0 +1,15 @@
+<!-- views/show.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= dogs.name %></title>
+</head>
+<body>
+    <h1><%= dogs.name %></h1>
+    <p>Breed: <%= dogs.breed %></p>
+    <p>Age: <%= dogs.age %></p>
+    <p>Vaccinated: <%= dogs.vaccinated ? 'Yes' : 'No' %></p>
+    <a href="/dogs">Back to All Dogs</a>
+</body>
+</html>

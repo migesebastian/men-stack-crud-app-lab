@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Dog</title>
+</head>
+<body>
+    <h1>Edit<%= dogs.name %></h1>
+    <form action="/dogs/<%= dogs._id %>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= dogs.name %>" required><br>
+        <label for="breed">Breed:</label>
+        <input type="text" id="breed" name="breed" value="<%= dogs.breed %>" required><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" value="<%= dogs.age %>" required><br>
+        <label for="vaccinated">Vaccinated:</label>
+        <input type="checkbox" id="vaccinated" name="vaccinated" <%= dogs.vaccinated ? 'checked' : '' %>><br>
+        <button type="submit">Update Dog</button>
+    </form>
+</body>
+</html>
